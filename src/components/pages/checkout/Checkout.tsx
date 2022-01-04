@@ -87,6 +87,10 @@ export const Checkout = () => {
                       <p>MM/YY</p>
                       <p>11/25</p>
                     </section>
+                    <section>
+                      <p>Postal Code</p>
+                      <p>11111</p>
+                    </section>
                   </div>
                 </section>
                 <section>
