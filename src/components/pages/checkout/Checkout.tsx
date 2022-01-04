@@ -72,6 +72,23 @@ export const Checkout = () => {
                   <p>Total:</p>
                   <p>{ '$' + (order.data.order.totalMoney / 100).toFixed(2) }</p>
                 </section>
+                <section className={styles.cardcontainer}>
+                  <div className={styles.card}>
+                    <h2>Test Card Info</h2>
+                    <section>
+                      <p>Card Number:</p>
+                      <p>4111 1111 1111 1111</p>
+                    </section>
+                    <section>
+                      <p>CVV</p>
+                      <p>111</p>
+                    </section>
+                    <section>
+                      <p>MM/YY</p>
+                      <p>11/25</p>
+                    </section>
+                  </div>
+                </section>
                 <section>
                   { !cardId ? <SquareForm onSuccess={(id: string) => setCardId(id)}/> : payment ? <></> : <p>Ready to submit</p>}
                   { payment && <p>Thank you! Your order has been processed.</p> }
