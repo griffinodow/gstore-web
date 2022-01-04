@@ -1,0 +1,36 @@
+// Colours
+body
+  --light-grey: #F7F7F7
+  --white: #FFFFFF
+  --black: #000000
+  --smurf-blue: #00A3FF
+  --dark-blue: #0072DB
+  --red: #FF0000
+
+// Themes
+@media (prefers-color-scheme: light)
+  body
+    --primary: var(--smurf-blue)
+    --on-primary: var(--white)
+    --secondary: var(--dark-blue)
+    --on-secondary: var(--white)
+    --error: var(--red)
+    --on-error: var(--white)
+    --surface: var(--white)
+    --on-surface: var(--black)
+    --background: var(--light-grey)
+    --on-background: var(--black)
+
+// Themes
+@media (prefers-color-scheme: dark)
+  body
+    --primary: var(--smurf-blue)
+    --on-primary: var(--white)
+    --secondary: var(--dark-blue)
+    --on-secondary: var(--white)
+    --error: var(--red)
+    --on-error: var(--white)
+    --surface: var(--white)
+    --on-surface: var(--black)
+    --background: var(--light-grey)
+    --on-background: var(--black)

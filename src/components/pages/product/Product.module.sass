@@ -1,0 +1,32 @@
+.product
+  background-color: var(--surface)
+  color: var(--on-surface)
+  padding: 24px
+  margin: 8px
+  border-radius: 16px
+  display: flex
+  flex-direction: row
+  gap: 8px
+  align-items: stretch
+  > section
+    width: 50%
+  > section:nth-child(1)
+    height: 100%
+    max-height: 368px
+  > section:nth-child(1) > img
+    width: 100%
+  > section:nth-child(2)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    > section:nth-child(2)
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: stretch
+
+@media only screen and (max-width: 688px)
+  .product
+    flex-direction: column
+    > section
+      width: 100%

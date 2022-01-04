@@ -1,0 +1,42 @@
+.container
+  margin: 8px
+  display: flex
+  flex-direction: column
+  gap: 16px
+
+.dash
+  background-color: var(--surface)
+  color: var(--on-surface)
+  padding: 24px
+  border-radius: 16px
+  display: flex
+  flex-direction: column
+  gap: 4px
+  > *
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+  > *:nth-last-child(1)
+    justify-content: center
+.listing
+  background-color: var(--surface)
+  color: var(--on-surface)
+  padding: 24px
+  border-radius: 16px
+  display: flex
+  flex-direction: row
+  gap: 8px
+  > section:nth-child(1) > img
+    height: 128px
+    width: 128px
+    object-fit: cover
+    object-position: center
+  > section:nth-child(2)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 100%
+    > section:nth-child(2)
+      display: flex
+      flex-direction: row
+      justify-content: space-between

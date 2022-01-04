@@ -1,0 +1,41 @@
+// Typography
+body
+  font-family: 'Roboto', Arial, sans-serif
+  font-size: 16px
+  font-weight: 400
+  -webkit-tap-highlight-color: transparent
+  color: var(--on-background)
+  background-color: var(--background)
+
+h1
+  font-size: 48px
+  font-weight: 700
+
+h2, .heading
+  font-size: 18px
+  font-weight: 700
+
+// Default Sizing
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+html, body, #root, #root > main
+  min-height: 100%
+  width: 100%
+  max-width: 100%
+input, select, textarea, button
+  font-family: inherit
+
+html, body
+  height: 100%
+
+#root
+  max-width: 1280px
+  margin: 0 auto
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+#root > main
+  flex-grow: 1
