@@ -7,6 +7,7 @@ import { Button } from '../../components/Button'
 import { removeLineItem, updateLineItem } from '../../../slices/app'
 import styles from './Cart.module.sass'
 import { Link } from 'react-router-dom'
+import { MdSync } from 'react-icons/md'
 
 export const Cart = () => {
   const dispatch = useDispatch()
@@ -33,7 +34,7 @@ export const Cart = () => {
         <Header title='CART'/>
         <main>
           { cart.length <= 0
-            ? <p>Cart is empty</p>
+            ? <p className={styles.center}>Cart is empty</p>
             : <section className={styles.container}>
                 <div className={styles.dash}>
                   <section>
@@ -85,6 +86,13 @@ export const Cart = () => {
         </>
     )
   } else {
-    return (<h1>LOADING</h1>)
+    return (
+      <>
+        <Header title='CART'/>
+        <main className='spin-container'>
+          <MdSync className='spin' size={36}/>
+        </main>
+      </>
+    )
   }
 }
