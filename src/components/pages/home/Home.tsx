@@ -4,6 +4,7 @@ import { NavSelector } from './components/NavSelector'
 import { useGetCatalogQuery } from '../../../slices/endpoints/catalog'
 import { Product } from './components/Product'
 import styles from './Home.module.sass'
+import { MdSync } from 'react-icons/md'
 
 export const Home = () => {
   const [category, setCategory] = useState<undefined | string>()
@@ -39,7 +40,10 @@ export const Home = () => {
   } else {
     return (
       <>
-        <h1>SHITTY LOADING SCREEN</h1>
+        <Header title='G-STORE' subtitle="The World's Best Selection of Cookies"/>
+        <main className='spin-container'>
+          <MdSync className='spin' size={36}/>
+        </main>
       </>
     )
   }

@@ -7,6 +7,7 @@ import { Button } from '../../components/Button'
 import { Counter } from '../../components/Counter'
 import { addLineItem } from '../../../slices/app'
 import styles from './Product.module.sass'
+import { MdSync } from 'react-icons/md'
 
 export const Product = () => {
   const dispatch = useDispatch()
@@ -57,7 +58,10 @@ export const Product = () => {
   } else {
     return (
       <>
-        <h1>LOADING SCREEN</h1>
+        <Header title='ADD TO CART'/>
+        <main className='spin-container'>
+          <MdSync className='spin' size={36}/>
+        </main>
       </>
     )
   }

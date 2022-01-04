@@ -8,6 +8,7 @@ import { useCreatePaymentMutation } from '../../../slices/endpoints/payment'
 import { Header } from '../../components/Header'
 import { SquareForm } from './components/SquareForm'
 import styles from './Checkout.module.sass'
+import { MdSync } from 'react-icons/md'
 
 export const Checkout = () => {
   const cart = useSelector((state: RootState) => state.app.lineItems)
@@ -81,6 +82,13 @@ export const Checkout = () => {
           </>
     )
   } else {
-    return <h1>LOADING SCREEN</h1>
+    return (
+      <>
+        <Header title='CHECKOUT'/>
+        <main className='spin-container'>
+          <MdSync className='spin' size={36}/>
+        </main>
+      </>
+    )
   }
 }
