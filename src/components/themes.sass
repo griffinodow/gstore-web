@@ -6,6 +6,8 @@ body
   --smurf-blue: #00A3FF
   --dark-blue: #0072DB
   --red: #FF0000
+  --dark-surface: #1e1e1e
+  --dark-black: #131313
 
 // Themes
 @media (prefers-color-scheme: light)
@@ -30,7 +32,10 @@ body
     --on-secondary: var(--white)
     --error: var(--red)
     --on-error: var(--white)
-    --surface: var(--white)
-    --on-surface: var(--black)
-    --background: var(--light-grey)
-    --on-background: var(--black)
+    --surface: var(--dark-surface)
+    --on-surface: var(--white)
+    --background: var(--dark-black)
+    --on-background: var(--white)
+
+.sq-card-message
+  color: var(--on-surface) !important
