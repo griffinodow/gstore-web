@@ -56,6 +56,7 @@ G-Store is a demo store for my portfolio.
 * [Redux.js](https://redux.js.org/)
 * [Sass](https://sass-lang.com/)
 * [TypeScript](https://www.typescriptlang.org/)
+* [SquareSDK](https://squareup.com/ca/en)
 * [Docker](https://www.docker.com/)
 
 <!-- GETTING STARTED -->
