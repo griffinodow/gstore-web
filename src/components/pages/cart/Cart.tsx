@@ -9,6 +9,10 @@ import styles from './Cart.module.sass'
 import { Link } from 'react-router-dom'
 import { MdSync } from 'react-icons/md'
 
+/**
+ * The cart page that lists all list items.
+ * @returns The Cart component.
+ */
 export const Cart = () => {
   const dispatch = useDispatch()
   const cart = useSelector((state: RootState) => state.app.lineItems)
@@ -26,7 +30,8 @@ export const Cart = () => {
 
   if (catalog) {
     cart.forEach(lineItem => {
-      const item = catalog!.data!.catalog!.items!.find(item => item.id === lineItem.itemId)
+      const item = catalog!.data!.catalog!.items!.find(item =>
+        item.id === lineItem.itemId)
       subTotal += lineItem.quantity * item!.variations![0].price
     })
     return (
@@ -59,9 +64,12 @@ export const Cart = () => {
                   </section>
                 </div>
                 { cart.map((lineItem) => {
-                  const itemData = catalog.data.catalog.items.find((item) => item.id === lineItem.itemId)
+                  const itemData = catalog.data.catalog.items.find((item) =>
+                    item.id === lineItem.itemId)
                   if (itemData) {
-                    return (<div key={lineItem.itemId} className={styles.listing}>
+                    return (<div
+                              key={lineItem.itemId}
+                              className={styles.listing}>
                       <section>
                         <img alt={itemData.name} src={itemData?.url}></img>
                       </section>
@@ -71,8 +79,16 @@ export const Cart = () => {
                           <h2>{ '$' + itemData?.variations[0].price / 100}</h2>
                         </section>
                         <section>
-                          <Counter count={lineItem.quantity} setCount={(number: number) => handleUpdateLineItem(lineItem.itemId, number)}/>
-                          <Button text='Remove' onClick={() => handleRemoveLineItem(lineItem.itemId)}/>
+                          <Counter
+                            count={lineItem.quantity}
+                            setCount={(number: number) =>
+                              handleUpdateLineItem(
+                                lineItem.itemId,
+                                number)}/>
+                          <Button
+                            text='Remove'
+                            onClick={() =>
+                              handleRemoveLineItem(lineItem.itemId)}/>
                         </section>
                       </section>
                     </div>)
