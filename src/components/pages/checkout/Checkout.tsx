@@ -10,13 +10,23 @@ import { SquareForm } from './components/SquareForm'
 import styles from './Checkout.module.sass'
 import { MdSync } from 'react-icons/md'
 
+/**
+ * The checkout page that collects payments.
+ * @returns The Checkout component.
+ */
 export const Checkout = () => {
   const cart = useSelector((state: RootState) => state.app.lineItems)
   const [cardId, setCardId] = useState<undefined | string>()
   const [paymentSent, setPaymentSent] = useState(false)
   const { data: catalog } = useGetCatalogQuery()
-  const [createOrder, { isError: isOrderError, error: orderError, data: order }] = useCreateOrderMutation()
-  const [createPayment, { isError: isPaymentError, error: paymentError, data: payment }] = useCreatePaymentMutation()
+  const [
+    createOrder,
+    { isError: isOrderError, error: orderError, data: order }
+  ] = useCreateOrderMutation()
+  const [
+    createPayment,
+    { isError: isPaymentError, error: paymentError, data: payment }
+  ] = useCreatePaymentMutation()
   const isError = isOrderError || isPaymentError
 
   useEffect(() => {
@@ -62,7 +72,8 @@ export const Checkout = () => {
                 </section>
                 <section>
                   <p>Subtotal:</p>
-                  <p>{ '$' + (order.data.order.totalMoney / 100 - 0).toFixed(2) }</p>
+                  <p>{ '$' +
+                    (order.data.order.totalMoney / 100 - 0).toFixed(2) }</p>
                 </section>
                 <section>
                   <p>Est. Taxes:</p>
@@ -70,7 +81,8 @@ export const Checkout = () => {
                 </section>
                 <section>
                   <p>Total:</p>
-                  <p>{ '$' + (order.data.order.totalMoney / 100).toFixed(2) }</p>
+                  <p>{ '$' +
+                    (order.data.order.totalMoney / 100).toFixed(2) }</p>
                 </section>
                 <section className={styles.cardcontainer}>
                   <div className={styles.card}>
@@ -94,8 +106,14 @@ export const Checkout = () => {
                   </div>
                 </section>
                 <section>
-                  { !cardId ? <SquareForm onSuccess={(id: string) => setCardId(id)}/> : payment ? <></> : <p>Ready to submit</p>}
-                  { payment && <p>Thank you! Your order has been processed.</p> }
+                  { !cardId
+                    ? <SquareForm onSuccess={(id: string) => setCardId(id)}/>
+                    : payment
+                      ? <></>
+                      : <p>Ready to submit</p>
+                  }
+                  { payment &&
+                    <p>Thank you! Your order has been processed.</p> }
                 </section>
               </div>
             </section>
