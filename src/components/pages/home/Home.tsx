@@ -6,6 +6,10 @@ import { Product } from './components/Product'
 import styles from './Home.module.sass'
 import { MdSync } from 'react-icons/md'
 
+/**
+ * Displays the home page.
+ * @returns The Home component.
+ */
 export const Home = () => {
   const [category, setCategory] = useState<undefined | string>()
   const { data: catalog } = useGetCatalogQuery()
@@ -17,20 +21,27 @@ export const Home = () => {
   if (catalog) {
     return (
       <>
-        <Header title='G-STORE' subtitle="The World's Best Selection of Cookies"/>
+        <Header
+          title='G-STORE'
+          subtitle="The World's Best Selection of Cookies"/>
         <main>
-          { category && <NavSelector category={category} setCategory={setCategory} categories={catalog.data.catalog.categories}/> }
+          { category &&
+            <NavSelector
+              category={category}
+              setCategory={setCategory}
+              categories={catalog.data.catalog.categories}/> }
           <section className={styles.products}>
             { category && catalog.data.catalog.categories.length > 0
-              ? catalog.data.catalog.items.filter((entry) => entry.categoryId === category).map((entry) =>
-                <Product
-                  key={entry.id}
-                  id={entry.id}
-                  name={entry.name}
-                  description={entry.description}
-                  url={entry.url}
-                  price={entry.variations[0].price}
-                />)
+              ? catalog.data.catalog.items.filter((entry) =>
+                entry.categoryId === category).map((entry) =>
+                  <Product
+                    key={entry.id}
+                    id={entry.id}
+                    name={entry.name}
+                    description={entry.description}
+                    url={entry.url}
+                    price={entry.variations[0].price}
+                  />)
               : <p>No products available</p>
             }
           </section>
@@ -40,7 +51,9 @@ export const Home = () => {
   } else {
     return (
       <>
-        <Header title='G-STORE' subtitle="The World's Best Selection of Cookies"/>
+        <Header
+          title='G-STORE'
+          subtitle="The World's Best Selection of Cookies"/>
         <main className='spin-container'>
           <MdSync className='spin' size={36}/>
         </main>
