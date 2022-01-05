@@ -9,6 +9,10 @@ import { addLineItem } from '../../../slices/app'
 import styles from './Product.module.sass'
 import { MdSync } from 'react-icons/md'
 
+/**
+ * The page where product information is displayed.
+ * @returns The Product component.
+ */
 export const Product = () => {
   const dispatch = useDispatch()
   const [quantity, setQuantity] = useState(1)
