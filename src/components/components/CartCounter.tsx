@@ -4,6 +4,10 @@ import { MdShoppingCart } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import styles from './CartCounter.module.sass'
 
+/**
+ * Icon that displays the amount of items in the cart.
+ * @returns CartCounter component.
+ */
 export const CartCounter = () => {
   const cart = useSelector((state: RootState) => state.app.lineItems)
   let total = 0
