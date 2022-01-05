@@ -21,6 +21,7 @@
     ],
     "rules": {
       "react/jsx-uses-react": "off",
-      "react/react-in-jsx-scope": "off"
+      "react/react-in-jsx-scope": "off",
+      "max-len": [2, {"code": 80, "tabWidth": 2, "ignoreUrls": true}]
     }
 }
