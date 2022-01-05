@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Navigate,
+  Route,
+  Routes
+} from 'react-router-dom'
 import { Home } from './pages/home/Home'
 import { Product } from './pages/product/Product'
 import { Footer } from './components/Footer'
@@ -7,6 +12,10 @@ import { Checkout } from './pages/checkout/Checkout'
 import './style.sass'
 import './themes.sass'
 
+/**
+ * The app component.
+ * @returns The entire app.
+ */
 function App () {
   return (
     <>
