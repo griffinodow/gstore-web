@@ -7,48 +7,32 @@
 
 <br />
 <div align="center">
-  <h3 align="center">G-Store App</h3>
+  <h3 align="center">G-Store</h3>
   <p align="center">
-     G-Store is a demo store for my portfolio
-    <br />
-    <a href="https://github.com/griffinodow/gstore-web"><strong>Explore the docs »</strong></a>
-    <br />
+     G-Store is an online store that sells cookies for my portfolio.
     <br />
     <a href="https://g-store.griffindow.com">View Website</a>
     ·
     <a href="https://github.com/griffinodow/gstore-web/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/griffinodow/gstore-web/issues">Request Feature</a>
   </p>
 </div>
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#environment">Environment</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#license">License</a></li>
-  </ol>
-</details>
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+![Screenshot](./docs/gstore-screenshot.png)
 
-G-Store is a demo store for my portfolio.
+This is the front-end web app of an online cookie store for my portfolio. Select a specified quanity of products to insert into a cart for purchasing. Then input test payment details to make a purchase.
+
+### Features
+- View products on the home page
+- View product details on each products page
+- Add a specified quanity of a product to the cart
+- View all products and their quantities in the cart
+- Summarize the cart on checkout and charge the total
+
+### Ambition
+
+The goal of this project was to communicate with an external CMS and payment processing system while using REST API paradigms.
 
 ### Built With
 
@@ -62,30 +46,29 @@ G-Store is a demo store for my portfolio.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This project is meant to run inside a Docker container for easy deployment. The intended experience is available at [g-store.griffindow.com](https://g-store.griffindow.com/)
+### View Demo Site
 
-### Prerequisites
+[g-store.griffindow.com](https://g-store.griffindow.com/)
 
-Install Docker for your desired platform.
+### Develop Locally
 
-### Installation
+```bash
+# Serve with hot reload at localhost:3000
+npm run dev
 
-Deploy the container with the following command.
+# Build for production
+npm run build
+```
+
+### Deploy Container
+
+Deploy the front-end micro-service container with the following command.
 
 ```bash
 docker run -p 3000:3000 griffinodow/gstore-web
 ```
 
 This will allow the app to be served at: http://localhost:3000
-
-
-<!-- ROADMAP -->
-## Roadmap
-See the [open issues](https://github.com/griffinodow/gstore-web/issues) for a full list of proposed features (and known issues).
-
-<!-- LICENSE -->
-## License
-Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
