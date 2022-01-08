@@ -9,7 +9,7 @@
 <div align="center">
   <h3 align="center">G-Store</h3>
   <p align="center">
-     G-Store is an online store that sells cookies for my portfolio.
+     G-Store is an online store that sells cookies for my portfolio
     <br />
     <a href="https://g-store.griffindow.com">View Website</a>
     ·
